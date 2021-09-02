@@ -1,13 +1,13 @@
 <template>
   <h1>Job Details</h1>
-  <p>The job is is {{ slug }}</p>
+  <p>The job is {{ id }}</p>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      slug: this.$route.params.slug
+      id: this.$route.params.id
     }
   }
 }
