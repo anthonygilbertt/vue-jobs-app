@@ -32,7 +32,7 @@ export default {
   color: #444;
 }
 .job h2:hover {
-  background: #ddd;
+  background: rgb(134, 129, 129);
 }
 .job a {
   text-decoration: none;
