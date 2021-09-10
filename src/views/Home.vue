@@ -1,6 +1,13 @@
 <template>
   <div class="home">
-    <h1>Home Page</h1>
+    <div v-if="projects.length">
+      <div v-for="project in projects" :key="project.id">
+        <p>{{ project.title }}</p>
+      </div>
+    </div>
+    <div v-else>
+      <p>There are no items in this array</p>
+    </div>
   </div>
   <FilterNav />
   <SingleProduct />
@@ -13,11 +20,20 @@ import SingleProduct from '../components/SingleProduct.vue'
 
 export default {
 
-  name: 'Home',
   components: {
     FilterNav,
     SingleProduct
- 
+  },
+  data() {
+    return {
+      projects: []
+    }
+  },
+  mounted() {
+    fetch('http://localhost:3000/projects')
+      .then(res => res.json())
+      .then(data => this.projects = data)
+      .catch(err => console.log(err))
   }
 }
 </script>

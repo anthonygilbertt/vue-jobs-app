@@ -1,7 +1,16 @@
 {
-    "jobs": [
-        { "title": "UX Designer", "id": 1, "details": "lorem"},
-        { "title": "Web Developer", "id": 2, "details": "lorem"},
-        { "title": "Vue Developer", "id": 3, "details": "lorem"}
+    "projects": [
+        {
+            "id": 1,
+            "title": "Create new homepage banner",
+            "details": "lorem",
+            "complete": false
+        },   
+        {
+            "id": 2,
+            "title": "Make marketing email",
+            "details": "lorem",
+            "complete": true
+        }
     ]
 }
