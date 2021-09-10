@@ -2,7 +2,7 @@
   <div class="home">
     <div v-if="projects.length">
       <div v-for="project in projects" :key="project.id">
-        <SingleProduct :project="project"/>
+        <SingleProject :project="project"/>
         
       </div>
     </div>
@@ -16,13 +16,13 @@
 
 <script>
 import FilterNav from '../components/FilterNav.vue'
-import SingleProduct from '../components/SingleProduct.vue'
+import SingleProject from '../components/SingleProject.vue'
 
 export default {
 
   components: {
     FilterNav,
-    SingleProduct
+    SingleProject
   },
   data() {
     return {
