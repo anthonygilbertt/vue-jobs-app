@@ -1,5 +1,5 @@
 <template>
-  <H2>Filter Nav Component</H2>
+  <h3>Filter Nav Component</h3>
 </template>
 
 <script>
@@ -8,6 +8,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+h3 {
+  color: rgb(177, 177, 177);
+}
 </style>

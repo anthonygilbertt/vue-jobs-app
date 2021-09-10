@@ -2,7 +2,8 @@
   <div class="home">
     <div v-if="projects.length">
       <div v-for="project in projects" :key="project.id">
-        <p>{{ project.title }}</p>
+        <SingleProduct :project="project"/>
+        
       </div>
     </div>
     <div v-else>
@@ -10,7 +11,6 @@
     </div>
   </div>
   <FilterNav />
-  <SingleProduct />
 
 </template>
 
