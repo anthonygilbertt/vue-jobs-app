@@ -2,11 +2,6 @@
 
   <Navbar />
 <!--
-  <router-link to="/">Home</router-link> |
-  <router-link :to="{ name: 'AddProject'}">Add Project</router-link> |
-  <router-link :to="{ name: 'EditProject'}">Edit Project</router-link>
-
-
   <button @click="redirect">Redurect</button>
   <button @click="back">Go Back</button>
   <button @click="forward">Go Forward</button>

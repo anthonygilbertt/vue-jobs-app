@@ -17,7 +17,7 @@ const routes = [
   },
   {
     // path: '/projects/:id',
-    path: '/projects',
+    path: '/edit',
     name: 'EditProject',
     component: EditProject,
     props: true //this means that we can accept 

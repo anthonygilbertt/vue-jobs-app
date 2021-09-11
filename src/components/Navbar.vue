@@ -1,10 +1,11 @@
 <template>
-  <h3>Project Planner<span class="material-icons icon">
-list
-</span></h3>
+
+  <nav class="main-nav">
     <router-link to="/">Home</router-link> |
-  <router-link :to="{ name: 'AddProject'}">Add Project</router-link> |
-  <router-link :to="{ name: 'EditProject'}">Edit Project</router-link>
+    <router-link :to="{ name: 'AddProject'}">Add Project</router-link> |
+    <router-link :to="{ name: 'EditProject'}">Edit Project</router-link>
+  </nav>
+
 </template>
 
 <script>
@@ -14,10 +15,19 @@ export default {
 </script>
 
 <style scoped>
-.icon {
-  text-size-adjust: 50px;
-  color: coral;
-  min-height: 50px;
+.main-nav {
+  text-align: center;
+  margin: 40px auto;
 }
-
+.main-nav a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  color: #999;
+  font-size: 18px;
+}
+a.router-link-active {
+  border-bottom: 2px solid #2d9236;
+  padding-bottom: 4px;
+}
 </style>
