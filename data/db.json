@@ -1,16 +1,10 @@
 {
   "projects": [
     {
-      "id": 1,
-      "title": "Create new homepage banner",
-      "details": "lorem",
-      "complete": false
-    },
-    {
       "id": 2,
       "title": "Make marketing email",
       "details": "lorem",
-      "complete": false
+      "complete": true
     },
     {
       "title": "test title",
@@ -21,7 +15,7 @@
     {
       "title": "blah title",
       "details": "blah details",
-      "complete": false,
+      "complete": true,
       "id": 6
     },
     {
@@ -33,7 +27,7 @@
     {
       "title": "aaaaaa",
       "details": "bbbbbbb",
-      "complete": false,
+      "complete": true,
       "id": 8
     }
   ]

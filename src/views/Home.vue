@@ -2,32 +2,22 @@
   <div class="home">
     <div v-if="projects.length">
       <div v-for="project in projects" :key="project.id">
-        <SingleProject :project="project" @delete="handleDelete" @complete="handleComplete"/>
-        
+      <SingleProject :project="project" @delete="handleDelete" @complete="handleComplete" />
       </div>
     </div>
-    <div v-else>
-      <p>There are no items in this array</p>
-    </div>
   </div>
-  <FilterNav />
-
 </template>
 
 <script>
-import FilterNav from '../components/FilterNav.vue'
 import SingleProject from '../components/SingleProject.vue'
 
 export default {
-
-  components: {
-    FilterNav,
-    SingleProject
-  },
+  name: 'Home',
+  components: { SingleProject },
   data() {
     return {
-      projects: []
-    }
+      projects: [],
+    };
   },
   mounted() {
     fetch('http://localhost:3000/projects')
@@ -37,15 +27,16 @@ export default {
   },
   methods: {
     handleDelete(id) {
-      this.projects = this.projects.filter((project) => {
+      this.projects = this.projects.filter(project => {
         return project.id !== id
       })
     },
     handleComplete(id) {
-      let localProject = this.projects.find(project => {
+      let p = this.projects.find(project => {
         return project.id === id
       })
-      localProject.complete = !localProject.complete
+      p.complete = !p.complete 
+      // console.log(p)
     }
   }
 }
