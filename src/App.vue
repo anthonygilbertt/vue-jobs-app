@@ -1,7 +1,7 @@
 <template>
 
-<!--
   <Navbar />
+<!--
   <router-link to="/">Home</router-link> |
   <router-link :to="{ name: 'AddProject'}">Add Project</router-link> |
   <router-link :to="{ name: 'EditProject'}">Edit Project</router-link>
