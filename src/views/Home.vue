@@ -9,6 +9,7 @@
 </template>
 
 <script>
+
 import SingleProject from '../components/SingleProject.vue'
 
 export default {
