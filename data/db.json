@@ -1,7 +1,34 @@
 {
-    "jobs": [
-        { "title": "UX Designer", "id": 1, "details": "lorem"},
-        { "title": "Web Developer", "id": 2, "details": "lorem"},
-        { "title": "Vue Developer", "id": 3, "details": "lorem"}
-    ]
+  "projects": [
+    {
+      "id": 2,
+      "title": "Make marketing email - edit",
+      "details": "lorem - edit",
+      "complete": true
+    },
+    {
+      "title": "test title",
+      "details": "test details",
+      "complete": false,
+      "id": 5
+    },
+    {
+      "title": "blah title",
+      "details": "blah details",
+      "complete": true,
+      "id": 6
+    },
+    {
+      "title": "bloop bleep title",
+      "details": "bloop bleep details",
+      "complete": false,
+      "id": 7
+    },
+    {
+      "title": "aaaaaa",
+      "details": "bbbbbbb",
+      "complete": true,
+      "id": 8
+    }
+  ]
 }
