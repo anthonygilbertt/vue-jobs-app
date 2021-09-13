@@ -2,7 +2,7 @@
   <div class="home">
   <FilterNav @filterChange="current = $event" :current="current"/>
     <div v-if="projects.length">
-      <div v-for="project in projects" :key="project.id">
+      <div v-for="project in filteredProjects" :key="project.id">
       <SingleProject :project="project" @delete="handleDelete" @complete="handleComplete" />
       </div>
     </div>
@@ -10,6 +10,10 @@
 </template>
 
 <script>
+// CHALLENGE:
+//-------------
+    // - When the filter changes(current), only show those projects
+    // - Use a computed property called filteredProjects to do this.
 
 import SingleProject from '../components/SingleProject.vue'
 import FilterNav from '../components/FilterNav.vue'
@@ -23,7 +27,8 @@ export default {
   data() {
     return {
       projects: [],
-      current: 'all'
+      current: 'all',
+      filteredProjects: 'all'
     };
   },
   mounted() {
@@ -45,9 +50,18 @@ export default {
       p.complete = !p.complete 
       // console.log(p)
     },
-    handleFilterChange() {
-
+  },
+  computed: {
+    filteredProjects() {
+      if( this.current === 'completed') {
+        return this.projects.filter(project => project.complete)
+      }
+      if( this.current === 'ongoing') {
+        return this.projects.filter(project => !project.complete)
+      }
+      return this.projects
     }
   }
+  
 }
 </script>

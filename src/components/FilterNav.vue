@@ -18,11 +18,9 @@
 <script>
 export default {
   props: ['current'],
-
   methods: {
     updateFilter(by) {
       this.$emit('filterChange', by)
-
     }
   }
 }
@@ -32,7 +30,6 @@ export default {
 h3 {
   color: rgb(177, 177, 177);
 }
-
 .filter-nav button {
   background: none;
   border: none;
@@ -48,6 +45,4 @@ h3 {
 .filter-nav button.active {
   color: #555;
 }
-
-
 </style>
